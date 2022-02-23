@@ -1,14 +1,14 @@
 <script setup lang="ts">
-defineProps<{
-  start: {
-    type: boolean;
-    default: false;
-  };
-  end: {
-    type: boolean;
-    default: false;
-  };
-}>();
+withDefaults(
+  defineProps<{
+    start?: boolean;
+    end?: boolean;
+  }>(),
+  {
+    start: false,
+    end: false,
+  }
+);
 </script>
 
 <template>
@@ -20,12 +20,13 @@ defineProps<{
       <slot />
     </span>
     <span
-      v-if="end"
+      v-else-if="end"
       class="flex items-baseline justify-center flex-shrink-0 w-6 h-6 ml-2 text-yellow-400"
     >
       <slot />
     </span>
     <span
+      v-else
       class="flex items-baseline justify-center flex-shrink-0 w-6 h-6 text-teal-400"
     >
       <slot />
