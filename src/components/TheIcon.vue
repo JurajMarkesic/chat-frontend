@@ -1,19 +1,39 @@
+<script setup lang="ts">
+defineProps<{
+  start: {
+    type: boolean;
+    default: false;
+  };
+  end: {
+    type: boolean;
+    default: false;
+  };
+}>();
+</script>
+
 <template>
   <span class="icon">
-    <slot></slot>
+    <span
+      v-if="start"
+      class="flex items-baseline justify-center flex-shrink-0 w-6 h-6 mr-2 text-violet-400"
+    >
+      <slot />
+    </span>
+    <span
+      v-if="end"
+      class="flex items-baseline justify-center flex-shrink-0 w-6 h-6 ml-2 text-yellow-400"
+    >
+      <slot />
+    </span>
+    <span
+      class="flex items-baseline justify-center flex-shrink-0 w-6 h-6 text-teal-400"
+    >
+      <slot />
+    </span>
   </span>
 </template>
 
 <style scoped>
-.icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  width: 1.5rem;
-  height: 1.5rem;
-}
-
 .icon svg {
   display: block;
   width: 100%;
