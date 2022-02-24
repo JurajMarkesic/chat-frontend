@@ -22,7 +22,7 @@ import ToolingIcon from "@/components/icons/IconTooling.vue";
 
   <p>Button: label and icon at the start</p>
   <TheButton>
-    <TheIcon start>
+    <TheIcon :start="true">
       <ToolingIcon />
     </TheIcon>
     Button label xyz

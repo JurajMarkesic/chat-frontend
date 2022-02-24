@@ -1,4 +1,13 @@
 <script setup lang="ts">
+import { inject } from "vue";
+import type { Socket } from "socket.io-client";
+
+const socket: Socket | undefined = inject("socket");
+socket?.emit("hello", { name: "juraj", age: 24 });
+socket?.on("noArg", () => {
+  console.log("received socket event");
+});
+
 defineProps<{
   msg: string;
 }>();
