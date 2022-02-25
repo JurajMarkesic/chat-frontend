@@ -8,7 +8,13 @@ import App from "./App.vue";
 import router from "./router";
 
 const app = createApp(App);
-app.provide("socket", io("http://localhost:3005"));
+app.provide(
+  "socket",
+  io("http://192.168.49.2:31000", {
+    transports: ["websocket"],
+    upgrade: false,
+  }),
+);
 
 app.use(createPinia());
 app.use(router);
