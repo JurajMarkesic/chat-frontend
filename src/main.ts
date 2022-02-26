@@ -10,7 +10,7 @@ import router from "./router";
 const app = createApp(App);
 app.provide(
   "socket",
-  io("http://192.168.49.2:31000", {
+  io("192.168.49.2:31621", {
     transports: ["websocket"],
     upgrade: false,
   }),
