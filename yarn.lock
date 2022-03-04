@@ -3235,6 +3235,11 @@
     "@vue/server-renderer" "3.2.31"
     "@vue/shared" "3.2.31"
 
+"vue3-google-oauth2@^1.0.6":
+  "integrity" "sha512-ebUW3V1jejImw2z9nggjczPj4jUnZArNq+kgTdLdGuf6k/zQDDCeGTLmTUiy5gSXMbzVz9PQWiVEj8eX6y/I0Q=="
+  "resolved" "https://registry.npmjs.org/vue3-google-oauth2/-/vue3-google-oauth2-1.0.6.tgz"
+  "version" "1.0.6"
+
 "w3c-hr-time@^1.0.2":
   "integrity" "sha512-z8P5DvDNjKDoFIHK7q8r8lackT6l+jo/Ye3HOle7l9nICP9lf1Ci25fy9vHd0JOWewkIFzXIEig3TdKT7JQ5fQ=="
   "resolved" "https://registry.npmjs.org/w3c-hr-time/-/w3c-hr-time-1.0.2.tgz"
