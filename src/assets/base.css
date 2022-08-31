@@ -1,43 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;800&family=Roboto+Condensed:wght@400&display=swap');
+
 /* color palette from <https://github.com/vuejs/theme> */
 :root {
   --white: #ffffff;
-  --black: #181818;
+  --black: #000000;
   --theme-main: #babe69;
 
-  --white-alpha-50: rgba(255, 255, 255, 0.5);
-  --black-alpha-50: rgba(0, 0, 0, 0.5);
+  --bg-3: hsl(216, 7.5%, 12.5%);
+  --bg-2: hsl(218, 7.5%, 17.5%);
+  --bg-1: hsl(220, 7.5%, 22.5%);
+
+  --font-text: 'Roboto Condensed';
+  --font-heading: 'Montserrat';
 }
 
 /* semantic color variables for this project */
 :root {
-  --color-background: var(--white);
-  --color-text: var(--black);
-
-  --section-gap: 6rem;
+  --color-background: var(--bg-3);
+  --color-text: var(--white);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-background: var(--black);
-    --color-text: var(--white);
-  }
-}
-
-*,
-*::before,
-*::after {
+* {
   box-sizing: border-box;
-  margin: 0;
-  position: relative;
-  font-weight: normal;
 }
 
 html {
   min-height: 100vh;
+  height: 100%;
+  scroll-behavior: smooth;
+  font-family: var(--font-text);
+  line-height: 1.6;
   color: var(--color-text);
   background: var(--color-background);
   font-family: var(--font-text), sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  height: 100%;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+#app {
+  height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+a {
+  color: inherit;
+}
+a:hover {
+  color: var(--theme-main);
 }

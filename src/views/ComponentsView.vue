@@ -5,22 +5,22 @@ import ToolingIcon from "@/components/icons/IconTooling.vue";
 </script>
 
 <template>
-  <p>Icon</p>
+  <pre>Icon</pre>
   <TheIcon>
     <ToolingIcon />
   </TheIcon>
 
-  <p>Button: label only</p>
+  <pre>Button: label only</pre>
   <TheButton> Button label xyz </TheButton>
 
-  <p>Button: icon only</p>
+  <pre>Button: icon only</pre>
   <TheButton>
     <TheIcon>
       <ToolingIcon />
     </TheIcon>
   </TheButton>
 
-  <p>Button: label and icon at the start</p>
+  <pre>Button: label and icon at the start</pre>
   <TheButton>
     <TheIcon :start="true">
       <ToolingIcon />
@@ -28,7 +28,7 @@ import ToolingIcon from "@/components/icons/IconTooling.vue";
     Button label xyz
   </TheButton>
 
-  <p>Button: label and icon at the end</p>
+  <pre>Button: label and icon at the end</pre>
   <TheButton>
     Button label xyz
     <TheIcon end>
